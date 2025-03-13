@@ -1,0 +1,52 @@
+Understanding the Dataset Structure
+The BreakHis dataset has images stored with filenames that contain information about:
+
+Biopsy Procedure
+Tumor Class (Benign or Malignant)
+Tumor Type (Subtype)
+Slide ID
+Magnification Factor
+An example filename: SOB_B_TA-14-4659-40-001.png
+
+SOB: Biopsy Procedure
+B: Benign Tumor Class
+TA: Tumor Type (Tubular Adenoma)
+14-4659: Slide ID
+40: Magnification Factor
+001: Sequence Number
+Objective
+We want to:
+
+Split the dataset into Training and Validation sets (e.g., 80% training, 20% validation).
+Maintain the class structure, organizing images into subdirectories based on tumor subtypes.
+Ensure that images from the same patient do not appear in both training and validation sets (to prevent data leakage).
+Steps to Create Training and Validation Directories
+Download and Extract the BreakHis Dataset: Ensure you have the dataset downloaded and extracted to a directory on your system.
+
+Understand the Original Dataset Structure: The dataset may be organized by magnification factors or other criteria.
+
+Create the Necessary Directories:
+Write a Python Script to Split the Data:
+
+Extract Patient IDs: Since images from the same patient should not be split between training and validation sets, we need to group images by patient ID.
+Split Patients: Randomly assign patients to training or validation sets.
+Copy Images: Based on the patient assignment, copy images to the corresponding directories.
+Patient IDs: The script ensures that images from the same patient are not split between training and validation sets.
+Randomness: The script uses random.shuffle to shuffle the patients before splitting. You can set a seed for reproducibility:
+python
+Copy code
+random.seed(42)
+Magnification Factors: This script does not consider magnification factors. If you want to create separate models for each magnification or include magnification in your data organization, you will need to modify the script accordingly.
+Explanation of the Script
+Import Statements: Imports necessary modules for file operations and randomization.
+Directory Creation: Creates the required directory structure for training and validation sets.
+Patient Collection:
+parse_filename Function: Extracts the subtype and patient ID from the filename.
+patients_per_subtype Dictionary: Collects a set of patient IDs for each subtype.
+Splitting Patients:
+Shuffles the patient IDs for each subtype.
+Splits them into training (80%) and validation (20%) sets.
+Copying Images:
+Iterates over all images in the original dataset.
+Determines whether to copy each image to the training or validation directory based on the patient ID and subtype.
+Final Message: Prints a confirmation message after the dataset has been split.
