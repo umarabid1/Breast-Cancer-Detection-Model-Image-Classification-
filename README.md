@@ -167,8 +167,6 @@ Below is a brief guide to the main scripts (filenames as mentioned in the Milest
 ## References
 - **Johns Hopkins Medicine**: [Types of Breast Cancer](https://pathology.jhu.edu/breast/types-of-breast-cancer/)  
 - **Medscape**: [Breast Cancer Overview](https://emedicine.medscape.com/article/1947145-overview)  
-- **Nikon Instruments**: [MicroscopyU](https://www.microscopyu.com/)  
-- **MyPathologyReport**: [Hemangioma](https://www.mypathologyreport.ca/diagnosis-library/hemangioma/)  
 - **Google Colab**: [Colab Platform](https://colab.research.google.com/)  
 - **Kaggle**: [BreakHis Dataset](https://www.kaggle.com/datasets/ambarish/breakhis) / [Cell Segmentation](https://www.kaggle.com/datasets/andrewmvd/breast-cancer-cell-segmentation?select=Images)
 
