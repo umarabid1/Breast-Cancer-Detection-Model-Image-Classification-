@@ -160,7 +160,7 @@ Below is a brief guide to the main scripts (filenames as mentioned in the Milest
 1. **Collect More Data**: Larger, more diverse samples improve model generalizability.  
 2. **Magnification Factor Differentiation**: Fine‐tuned models for each magnification (40x, 100x, etc.).  
 3. **Multiclass Classification**: Classify specific tumor subtypes, not just binary benign/malignant.  
-4. **Transfer Learning**: Pretrained CNNs (ResNet, Inception) may boost accuracy and reduce training time.
+4. **Transfer Learning**: Pretrained CNNs may boost accuracy and reduce training time.
 
 ---
 
